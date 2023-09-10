@@ -47,6 +47,10 @@ void solve(){
         cin>>arr[i];
     }
     int ans = 0;
+    if(n==2){
+        if(arr[0] == 1) ans = 2;
+        else if(arr[0] == 2) ans = 1;
+    }
     sort(arr, arr+n-1);
     for(int i = 1; i < n-1; i++){
         if(arr[i] - arr[i-1] != 1){
