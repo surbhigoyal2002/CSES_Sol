@@ -58,7 +58,7 @@ void solve(){
         }
     }
     
-    
+    if(ans == 0) ans = n;
  cout<<ans<<endl;
 }
 
