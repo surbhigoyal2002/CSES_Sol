@@ -42,8 +42,8 @@ using namespace std;
 void solve(){
     int n;
     cin >>n;
-    vector<int> arr(n-1);
-    for(int i = 0; i < n-1; i++){
+    vector<int> arr(n, 0);
+    for(int i = 0; i < n; i++){
         cin>>arr[i];
     }
     int ans = 0;
@@ -53,14 +53,15 @@ void solve(){
         else if(arr[0] == 2) ans = 1;
     }
     
-    for(int i = 1; i < n-1; i++){
-        if(arr[i] != i+1){
-            ans = arr[i]-1;
+    for(int i = 0; i < n; i++){
+        if(arr[i] != i){
+            ans = i;
+  	    break;
         }
     }
     
     if(ans == 0) ans = n;
- cout<<ans<<endl;
+ 	cout<<ans<<endl;
 }
 
 
