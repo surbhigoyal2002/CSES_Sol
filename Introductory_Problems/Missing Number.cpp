@@ -42,18 +42,19 @@ using namespace std;
 void solve(){
     int n;
     cin >>n;
-    int arr[n-1];
+    vector<int> arr(n-1);
     for(int i = 0; i < n-1; i++){
         cin>>arr[i];
     }
     int ans = 0;
+    sort(arr.begin(), arr.end());
     if(n==2){
         if(arr[0] == 1) ans = 2;
         else if(arr[0] == 2) ans = 1;
     }
-    sort(arr, arr+n-1);
+    
     for(int i = 1; i < n-1; i++){
-        if(arr[i] - arr[i-1] != 1){
+        if(arr[i] != i+1){
             ans = arr[i]-1;
         }
     }
