@@ -28,17 +28,7 @@ using namespace std;
 #define foir(a,b) for(auto i=a;i>=b;--i)
 #define forj(a,b) for(auto j=a;j<b;++j)
 #define forjr(a,b) for(auto j=a;j>=b;--j)
- 
-// bool isPrime(int n){
-//     if (n <= 1)
-//         return false;
- 
-//     for (int i = 2; i <= n / 2; i++)
-//         if (n % i == 0)
-//             return false;
- 
-//     return true;
-// }
+
 void solve(){
     int n;
     cin>>n;
