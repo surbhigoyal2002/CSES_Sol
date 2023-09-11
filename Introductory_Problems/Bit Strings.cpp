@@ -6,7 +6,7 @@
 #define INF_INT 2e9
 #define INF_LL 2e18
 #define matmax 25
-//#define mod 1000000007
+#define mod 1000000007
 #define mp make_pair
 #define pb push_back
 #define pi pair<int, int>
@@ -42,9 +42,12 @@ using namespace std;
 void solve(){
     int n;
     cin>>n;
-    int mod = 1e9 + 7;
-    int ans = pow(2,n);
-   cout<< ans % mod << endl;
+    //int mod = 1e9 + 7;
+    int ans = 1;
+    for(int i = 0; i < n; i++){
+        ans = (ans * 2) % mod;
+    }
+   cout<< ans<< endl;
     
     
     
