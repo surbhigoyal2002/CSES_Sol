@@ -52,7 +52,7 @@ int f(int n, vector<int> &arr, vector<int> &dp){
            ans = (ans + f(n-arr[i], arr, dp))%mod;
        }
    }
-   return ans;
+   return dp[n] = ans;
 }
 void solve(){
     int n;
@@ -63,7 +63,7 @@ void solve(){
 //    }
     vector<int> arr = {1,2,3,4,5,6};
     vector<int> dp(n+1, -1);
-    int a = f(n, arr, dp);
+    int a = f(n, arr, dp)%mod;
   
     cout<<a<<endl;
    
