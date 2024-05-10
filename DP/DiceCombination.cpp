@@ -6,7 +6,7 @@
 #define INF_INT 2e9
 #define INF_LL 2e18
 #define matmax 25
-// #define mod 1e9+7    
+#define mod 1000000007  
 #define mp make_pair
 #define pb push_back
 #define pi pair<int, int>
@@ -32,7 +32,7 @@ using namespace std;
  
 // const int X = 1e7+10;
 // vector<bool> isPrime(X, 1);
-int mod = 1e9+7;
+
 void dfs(int node, vector<int> &vis, vector<vector<int>> &adj){
     if(adj[node].size() == 0)return;
     vis[node] = 1;
